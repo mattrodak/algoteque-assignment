@@ -1,4 +1,3 @@
-import { MemoryRouter, Routes } from 'react-router-dom'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
@@ -17,13 +16,7 @@ vi.mock('react-router-dom', async () => {
 
 const setup = () => ({
   user: userEvent.setup(),
-  ...render(
-    <MemoryRouter>
-      <Routes>
-        <Search />
-      </Routes>
-    </MemoryRouter>,
-  ),
+  ...render(<Search />),
 })
 
 describe('Search', () => {
