@@ -4,8 +4,8 @@ import type { Get5DayForecastByLocationIdResponse } from '@/types/get5DaysForeca
 import type { CurrentConditionsResponse } from '@/types/getCurrentConditionsByLocationId.types'
 import type { SearchByCityResponse } from '@/types/searchByCity.types'
 
-// 8 hours in seconds
-const KEEP_UNUSED_DATA_FOR = 8 * 60 * 60
+// cache data for 60 seconds
+const KEEP_UNUSED_DATA_FOR = 60
 
 export const citiesApi = baseApi.injectEndpoints({
   endpoints: build => ({
